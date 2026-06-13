@@ -1,0 +1,93 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": ["# Ideogram 4 Cover Generation for D2D Publishing"]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "!pip install -q diffusers transformers accelerate",
+        "!pip install -q huggingface_hub"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from huggingface_hub import login",
+        "login()  # Get free token at https://huggingface.co/settings/tokens"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import torch",
+        "from diffusers import DiffusionPipeline",
+        "from PIL import Image",
+        "import os, time",
+        "",
+        "print('Downloading Ideogram 4...')",
+        "pipe = DiffusionPipeline.from_pretrained('ideogram-ai/ideogram-4-nf4', torch_dtype=torch.bfloat16)",
+        "pipe.to('cuda')",
+        "print('Model loaded!')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "OUTPUT_DIR = '/content/covers'",
+        "os.makedirs(OUTPUT_DIR, exist_ok=True)",
+        "",
+        "# All 11 book cover prompts",
+        "covers = [",
+        "  ('the-genesis-engine', 'The Genesis Engine', 'Middle grade sci-fi book cover. Title The Genesis Engine in bold futuristic font at top. Author Daniel Ryan at bottom. Central image: a massive engineered fungal spore pod on Mars surface with Earth visible in orange sky. Red Martian landscape. Clean, bold, cartoonish. 1600x2400.'),",
+        "  ('the-martian-spore', 'The Martian Spore', 'Middle grade sci-fi book cover. Title The Martian Spore in bold futuristic font at top. Author Daniel Ryan at bottom. Central image: cracked Martian soil with glowing green fungal mycelium spreading. Warning signs planted. Clean, bold, cartoonish. 1600x2400.'),",
+        "  ('the-crimson-bloom', 'The Crimson Bloom', 'Middle grade sci-fi book cover. Title The Crimson Bloom in bold futuristic font at top. Author Daniel Ryan at bottom. Central image: massive crimson-red fungal bloom spreading across Mars viewed from space. Spiral pattern. Clean, bold, cartoonish. 1600x2400.'),",
+        "  ('sporefall', 'Sporefall', 'YA sci-fi horror book cover. Title Sporefall in distressed font at top. Author Daniel Ryan at bottom. Central image: terrifying fungal fruiting body in rainforest canopy releasing spores. Research camp below with fleeing figures. Dark, atmospheric, stylized. 1600x2400.'),",
+        "  ('mycelial-tide', 'Mycelial Tide', 'YA sci-fi horror book cover. Title Mycelial Tide in distressed font at top. Author Daniel Ryan at bottom. Central image: wall of mycelium consuming a city street like a tidal wave. Cars and buildings overtaken. Dark, atmospheric, stylized. 1600x2400.'),",
+        "  ('mycelial-earth', 'Mycelial Earth', 'YA sci-fi horror book cover. Title Mycelial Earth in distressed font at top. Author Daniel Ryan at bottom. Central image: Earth from space with continents covered in glowing fungal mycelium. Small spaceship approaching. Dark, atmospheric, stylized. 1600x2400.'),",
+        "  ('the-salami-saboteur', 'The Salami Saboteur', 'Middle grade mystery/humor book cover. Title The Salami Saboteur in playful font at top. Author Daniel Ryan at bottom. Central image: hand-drawn style ginger cat in black mask sneaking away with enormous salami. Girl with glasses and bulldog looking shocked. Doofus dog has X-eyes. Doodle style like Diary of a Wimpy Kid. 1600x2400.'),",
+        "  ('the-glass-vaults-gambit', 'The Glass Vaults Gambit', 'Middle grade mystery/humor book cover. Title The Glass Vaults Gambit in playful font at top. Author Daniel Ryan at bottom. Central image: hand-drawn style shopping mall at night with security laser grid through skylight. Ginger cat in black turtleneck in air duct. Girl with glasses and bulldog peeking. Doodle style. 1600x2400.'),",
+        "  ('station-zero', 'Station Zero', 'YA sci-fi book cover. Title Station Zero in bold futuristic font at top. Author Daniel Ryan at bottom. Central image: derelict space station in deep space with single blinking light. Small shuttle approaching. Clean sci-fi aesthetic. 1600x2400.'),",
+        "  ('the-echo-chamber', 'The Echo Chamber', 'YA sci-fi thriller book cover. Title The Echo Chamber in bold tech-thriller font at top. Author Daniel Ryan at bottom. Central image: human face reflected in screen but reflection is AI avatar. Glitch effects, data streams, social media icons. Tech-thriller aesthetic. 1600x2400.'),",
+        "  ('the-silent-strata', 'The Silent Strata', 'YA sci-fi book cover. Title The Silent Strata in bold futuristic font at top. Author Daniel Ryan at bottom. Central image: cross-section of Earth crust with dark layers. Ancient alien structure glowing in deepest layer. Tiny drill approaching. Clean sci-fi aesthetic. 1600x2400.'),",
+        "]",
+        "",
+        "for slug, title, prompt in covers:",
+        "    print(f'Generating: {title}...')",
+        "    result = pipe(prompt=prompt, width=1600, height=2400, num_inference_steps=20, guidance_scale=7.5)",
+        "    img = result.images[0]",
+        "    filepath = f'{OUTPUT_DIR}/{slug}-ebook-cover.png'",
+        "    img.save(filepath, 'PNG')",
+        "    print(f'  Saved: {filepath}')",
+        "",
+        "print('\\nAll covers generated!')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "# Download all covers as ZIP",
+        "import shutil",
+        "from google.colab import files",
+        "",
+        "shutil.make_archive('/content/covers', 'zip', OUTPUT_DIR)",
+        "files.download('/content/covers.zip')"
+      ]
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 4
+}
