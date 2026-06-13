@@ -1,31 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
-  <!-- Column base -->
-  <rect x="140" y="300" width="120" height="20" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Column shaft -->
-  <rect x="160" y="150" width="80" height="150" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Column fluting -->
-  <line x1="175" y1="160" x2="175" y2="290" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="190" y1="160" x2="190" y2="290" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="210" y1="160" x2="210" y2="290" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="225" y1="160" x2="225" y2="290" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Column capital -->
-  <path d="M 150 150 L 140 130 L 260 130 L 250 150" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Juice box on top -->
-  <rect x="170" y="80" width="60" height="50" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <rect x="195" y="70" width="10" height="10" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <text x="200" y="110" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="10" fill="black">OJ</text>
-  <!-- Ginger cat on juice box -->
-  <ellipse cx="200" cy="65" rx="20" ry="15" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="192" cy="60" r="3" fill="black"/>
-  <circle cx="208" cy="60" r="3" fill="black"/>
-  <path d="M 195 70 Q 200 75 205 70" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M 180 55 L 175 45" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <path d="M 220 55 L 225 45" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Cat tail -->
-  <path d="M 220 75 Q 240 70 245 55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <!-- Crown on cat -->
-  <path d="M 188 52 L 192 42 L 196 50 L 200 40 L 204 50 L 208 42 L 212 52" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-
-  <text x="200" y="375" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="22" fill="black" font-weight="bold">COLUMN OF SHAME</text>
+  <!-- COLUMN OF SHAME — Detailed Diary of a Wimpy Kid style doodle -->
+  
+  <!-- Ground/grass area -->
+  <line x1="40" y1="340" x2="360" y2="340" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Grass tufts -->
+  <path d="M 50 340 L 45 325 L 55 338" fill="none" stroke="black" stroke-width="1" stroke-linecap="round"/>
+  <path d="M 80 340 L 72 322 L 82 336" fill="none" stroke="black" stroke-width="1" stroke-linecap="round"/>
+  <path d="M 320 340 L 315 326 L 325 338" fill="none" stroke="black" stroke-width="1" stroke-linecap="round"/>
+  <path d="M 340 340 L 338 328 L345 337" fill="none" stroke="black" stroke-width="1" stroke-linecap="round"/>
+  
+  <!-- Grand Prize pedestal base -->
+  <rect x="120" y="310" width="160" height="30" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="130" y="315" width="140" height="20" fill="none" stroke="black" stroke-width="1" stroke-linecap="round"/>
+  <!-- Pedestal text -->
+  <text x="200" y="330" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="8" fill="black">GRAND PRIZE</text>
+  
+  <!-- Tall column shaft — with marble texture lines -->
+  <rect x="155" y="120" width="90" height="190" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Fluting/vertical lines -->
+  <line x1="170" y1="130" x2="170" y2="300" stroke="black" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="185" y1="130" x2="185" y2="300" stroke="black" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="200" y1="130" x2="200" y2="300" stroke="black" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="215" y1="130" x2="215" y2="300" stroke="black" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="230" y1="130" x2="230" y2="300" stroke="black" stroke-width="0.8" stroke-linecap="round"/>
+  <!-- Marble cracks/imperfections -->
+  <path d="M 175 180 L 178 195 L 174 210" fill="none" stroke="black" stroke-width="0.5" stroke-dasharray="2 3"/>
+  <path d="M 210 200 L 215 220" fill="none" stroke="black" stroke-width="0.5" stroke-dasharray="2 3"/>
+  
+  <!-- Column capital (top) -->
+  <path d="M 145 120 L 135 100 L 265 100 L 255 120" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Decorative scrollwork on capital -->
+  <path d="M 150 105 Q 145 95 155 90" fill="none" stroke="black" stroke-width="1.5"/>
+  <path d="M 250 105 Q 255 95 245 90" fill="none" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Juice box on top of column — with detail -->
+  <rect x="165" y="45" width="70" height="55" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Juice box label -->
+  <text x="200" y="65" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="8" fill="black">OJ</text>
+  <text x="200" y="78" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="5" fill="black">100% REAL</text>
+  <!-- Juice box straw -->
+  <line x1="235" y1="45" x2="242" y2="25" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Splash on juice box -->
+  <circle cx="175" cy="85" r="2" fill="none" stroke="black" stroke-width="0.8"/>
+  <circle cx="170" cy="80" r="1" fill="none" stroke="black" stroke-width="0.8"/>
+  
+  <!-- Ginger cat ON the juice box — proud pose -->
+  <!-- Cat body -->
+  <ellipse cx="200" cy="38" rx="28" ry="22" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Cat head -->
+  <circle cx="200" cy="22" r="18" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Cat ears -->
+  <path d="M 185 8 L 178 -8 L 192 5" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 215 8 L 222 -8 L 208 5" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Inner ear detail -->
+  <path d="M 187 5 L 183 -3 L 191 4" fill="none" stroke="black" stroke-width="1"/>
+  <path d="M 213 5 L 217 -3 L 209 4" fill="none" stroke="black" stroke-width="1"/>
+  <!-- Cat eyes — one winking (smug expression) -->
+  <circle cx="192" cy="18" r="4" fill="black"/>
+  <path d="M 208 18 Q 212 15 216 18" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cat nose -->
+  <path d="M 198 24 L 200 22 L 202 24 Z" fill="black"/>
+  <!-- Cat mouth — smug smile -->
+  <path d="M 192 28 Q 200 36 208 28" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Whiskers -->
+  <line x1="178" y1="20" x2="160" y2="15" stroke="black" stroke-width="1"/>
+  <line x1="178" y1="24" x2="158" y2="24" stroke="black" stroke-width="1"/>
+  <line x1="222" y1="20" x2="240" y2="15" stroke="black" stroke-width="1"/>
+  <line x1="222" y1="24" x2="242" y2="24" stroke="black" stroke-width="1"/>
+  <!-- Cat crown -->
+  <path d="M 182 2 L 186 -8 L 190 0 L 194 -10 L 198 2 L 202 -8 L 206 0 L 210 -10 L 218 2" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Cat tail curling -->
+  <path d="M 228 45 Q 240 40 245 25 Q 248 15 242 10" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  
+  <!-- Annoyed bird watching from the side -->
+  <circle cx="320" cy="80" r="12" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="315" cy="76" r="2" fill="black"/>
+  <!-- Bird beak -->
+  <path d="M 308 80 L 298 78 L 308 82" fill="none" stroke="black" stroke-width="1.5"/>
+  <!-- Bird thought bubble -->
+  <circle cx="330" cy="55" r="12" fill="none" stroke="black" stroke-width="1"/>
+  <circle cx="322" cy="48" r="2" fill="none" stroke="black" stroke-width="0.8"/>
+  <circle cx="318" cy="42" r="1.5" fill="none" stroke="black" stroke-width="0.6"/>
+  <text x="330" y="58" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="5" fill="black">??</text>
+  
+  <!-- Bald man statue beside column (Highspire Ruins reference) -->
+  <circle cx="90" cy="200" r="15" fill="none" stroke="black" stroke-width="1.5"/>
+  <path d="M 82 190 L 80 175 L 85 178" fill="none" stroke="black" stroke-width="1"/>
+  <!-- Small label -->
+  <text x="90" y="225" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="6" fill="black">ancient</text>
+  <text x="90" y="233" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="6" fill="black">statue</text>
+  
+  <!-- Arrow pointing to juice box -->
+  <path d="M 310 120 L 240 70" stroke="black" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="315" y="125" font-family="Comic Sans MS, cursive" font-size="7" fill="black">really?</text>
+  
+  <!-- Small doodle elements in corners -->
+  <!-- Star doodle top-left -->
+  <path d="M 55 30 L 58 40 L 68 40 L 60 47 L 63 57 L 55 50 L 47 57 L 50 47 L 42 40 L 52 40 Z" fill="none" stroke="black" stroke-width="1"/>
+  
+  <!-- Exclamation marks -->
+  <text x="350" y="30" font-family="Comic Sans MS, cursive" font-size="14" fill="black">!!!</text>
+  
+  <!-- Caption -->
+  <text x="200" y="385" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="24" fill="black" font-weight="bold">COLUMN OF SHAME</text>
 </svg>
