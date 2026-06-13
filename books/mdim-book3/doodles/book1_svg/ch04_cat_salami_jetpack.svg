@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Giant salami body -->
+  <ellipse cx="200" cy="180" rx="60" ry="40" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Salami texture -->
+  <circle cx="170" cy="170" r="8" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="200" cy="160" r="6" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="230" cy="175" r="7" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="185" cy="195" r="5" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="215" cy="190" r="6" fill="none" stroke="black" stroke-width="1.5"/>
+  <!-- Salami ties -->
+  <path d="M 150 155 Q 155 145 165 150" fill="none" stroke="black" stroke-width="2"/>
+  <path d="M 235 150 Q 245 145 250 155" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Straps -->
+  <path d="M 155 200 Q 200 230 245 200" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 160 160 L 160 200" stroke="black" stroke-width="2"/>
+  <path d="M 240 160 L 240 200" stroke="black" stroke-width="2"/>
+  <!-- Cat hanging below -->
+  <ellipse cx="200" cy="280" rx="25" ry="20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cat ears -->
+  <path d="M 175 265 L 168 250 L 185 262" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 225 265 L 232 250 L 215 262" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cat face -->
+  <circle cx="190" cy="275" r="4" fill="black"/>
+  <circle cx="210" cy="275" r="4" fill="black"/>
+  <path d="M 195 288 Q 200 295 205 288" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cat whiskers -->
+  <line x1="175" y1="280" x2="155" y2="275" stroke="black" stroke-width="1.5"/>
+  <line x1="175" y1="285" x2="155" y2="285" stroke="black" stroke-width="1.5"/>
+  <line x1="225" y1="280" x2="245" y2="275" stroke="black" stroke-width="1.5"/>
+  <line x1="225" y1="285" x2="245" y2="285" stroke="black" stroke-width="1.5"/>
+  <!-- Cat arms reaching up -->
+  <path d="M 178 290 Q 165 300 170 315" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 222 290 Q 235 300 230 315" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
+  <!-- Exhaust trail -->
+  <path d="M 180 140 Q 170 120 180 100" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <path d="M 200 135 Q 200 115 200 95" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <path d="M 220 140 Q 230 120 220 100" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="4 4"/>
+
+  <text x="200" y="375" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="22" fill="black" font-weight="bold">SALAMI JETPACK</text>
+</svg>
