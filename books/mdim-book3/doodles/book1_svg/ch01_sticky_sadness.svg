@@ -1,95 +1,104 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
-  <!-- STICKY SADNESS — A detailed Diary of a Wimpy Kid style doodle -->
-  
-  <!-- Kitchen table surface with wood grain texture -->
-  <rect x="40" y="280" width="320" height="80" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <line x1="60" y1="295" x2="340" y2="295" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-dasharray="8 4"/>
-  <line x1="80" y1="310" x2="320" y2="310" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-dasharray="6 6"/>
-  <line x1="100" y1="325" x2="300" y2="325" stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-dasharray="4 8"/>
-  
-  <!-- Cereal box on table (partially visible) -->
-  <rect x="280" y="220" width="60" height="65" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <text x="310" y="250" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="6" fill="black">OATS</text>
-  <text x="310" y="260" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="5" fill="black">THE HEALTHY</text>
-  <text x="310" y="268" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="5" fill="black">KIBBLE</text>
-  
-  <!-- Bowl — ceramic with rim detail -->
-  <path d="M 100 230 Q 100 290 200 310 Q 300 290 300 230" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <ellipse cx="200" cy="230" rx="100" ry="28" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Bowl inner shadow -->
-  <ellipse cx="200" cy="235" rx="85" ry="20" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 5"/>
-  
-  <!-- Oatmeal lumps — irregular organic shapes -->
-  <ellipse cx="155" cy="248" rx="20" ry="14" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <ellipse cx="200" cy="242" rx="25" ry="16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <ellipse cx="245" cy="252" rx="18" ry="12" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <ellipse cx="175" cy="262" rx="15" ry="10" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <ellipse cx="220" cy="258" rx="17" ry="11" fill="none" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Lumpy texture details -->
-  <circle cx="148" cy="243" r="4" fill="none" stroke="black" stroke-width="1"/>
-  <circle cx="208" cy="236" r="5" fill="none" stroke="black" stroke-width="1"/>
-  <circle cx="238" cy="248" r="3" fill="none" stroke="black" stroke-width="1"/>
-  
-  <!-- Frowny face on the front of the bowl -->
-  <!-- Eyes — uneven, hand-drawn style -->
-  <ellipse cx="165" cy="225" rx="7" ry="5" fill="black"/>
-  <ellipse cx="235" cy="225" rx="7" ry="5" fill="black"/>
-  <!-- Eye highlights -->
-  <circle cx="167" cy="223" r="1.5" fill="white" stroke="white" stroke-width="0.5"/>
-  <circle cx="237" cy="223" r="1.5" fill="white" stroke="white" stroke-width="0.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Wood grain table surface -->
+  <path d="M0 280 Q50 275 100 282 Q150 288 200 278 Q250 270 300 283 Q350 290 400 280" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M0 290 Q60 285 120 292 Q180 298 240 288 Q300 280 360 293 Q380 296 400 290" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M0 300 Q40 295 80 303 Q160 310 240 300 Q320 292 360 303 Q380 308 400 300" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M0 310 Q70 305 140 312 Q200 318 280 308 Q340 300 380 312 Q390 315 400 310" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M0 320 Q55 315 110 322 Q170 328 230 318 Q290 310 350 322 Q375 326 400 320" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M0 330 Q45 325 90 332 Q150 338 210 328 Q270 320 330 332 Q365 336 400 330" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M0 340 Q65 335 130 342 Q190 348 260 338 Q320 330 370 342 Q385 346 400 340" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+
+  <!-- Cereal box on table -->
+  <rect x="280" y="210" width="60" height="70" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <line x1="280" y1="230" x2="340" y2="230" stroke="#000" stroke-width="1.5"/>
+  <text x="292" y="225" font-family="Comic Sans MS, cursive" font-size="7" fill="#000">OAT</text>
+  <text x="290" y="242" font-family="Comic Sans MS, cursive" font-size="6" fill="#000">YUMMIES</text>
+  <circle cx="310" cy="255" r="10" stroke="#000" stroke-width="1.5" fill="none"/>
+  <line x1="306" y1="252" x2="314" y2="258" stroke="#000" stroke-width="1"/>
+  <line x1="314" y1="252" x2="306" y2="258" stroke="#000" stroke-width="1"/>
+
+  <!-- Bowl -->
+  <ellipse cx="160" cy="270" rx="80" ry="20" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M80 270 Q80 330 160 340 Q240 330 240 270" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="160" cy="270" rx="70" ry="15" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Inner shadow -->
+  <path d="M100 275 Q100 310 160 320 Q220 310 220 275" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Oatmeal lumps -->
+  <ellipse cx="130" cy="280" rx="18" ry="10" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="165" cy="285" rx="22" ry="12" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="150" cy="295" rx="15" ry="8" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="180" cy="278" rx="12" ry="7" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="140" cy="300" rx="10" ry="6" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <!-- Texture on lumps -->
+  <path d="M125 278 Q128 275 132 278" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M160 283 Q163 280 167 283" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M145 293 Q148 290 152 293" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M175 276 Q178 273 182 276" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Frowny face on bowl -->
+  <circle cx="145" cy="305" r="3" fill="#000"/>
+  <circle cx="175" cy="305" r="3" fill="#000"/>
   <!-- Angry eyebrows -->
-  <path d="M 155 218 L 172 222" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <path d="M 245 218 L 228 222" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <!-- Big frown -->
-  <path d="M 170 250 Q 200 268 230 250" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Teeth showing through frown -->
-  <line x1="185" y1="252" x2="185" y2="258" stroke="black" stroke-width="1"/>
-  <line x1="195" y1="254" x2="195" y2="260" stroke="black" stroke-width="1"/>
-  <line x1="205" y1="254" x2="205" y2="260" stroke="black" stroke-width="1"/>
-  <line x1="215" y1="252" x2="215" y2="258" stroke="black" stroke-width="1"/>
-  
-  <!-- Steam rising as tiny fists — with motion lines -->
-  <!-- Left fist -->
-  <path d="M 130 195 C 115 175 118 155 128 148 C 138 142 132 158 138 170 C 142 160 148 148 142 165 L 138 185" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <line x1="125" y1="200" x2="118" y2="195" stroke="black" stroke-width="0.5" stroke-dasharray="2 3"/>
-  
-  <!-- Middle fist -->
-  <path d="M 200 190 C 192 168 198 148 208 142 C 218 136 212 155 218 165 C 222 155 228 142 222 160 L 215 182" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <line x1="205" y1="195" x2="200" y2="188" stroke="black" stroke-width="0.5" stroke-dasharray="2 3"/>
-  
-  <!-- Right fist -->
-  <path d="M 270 195 C 285 175 282 155 272 148 C 262 142 268 158 262 170 C 258 160 252 148 258 165 L 262 185" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <line x1="275" y1="200" x2="282" y2="195" stroke="black" stroke-width="0.5" stroke-dasharray="2 3"/>
-  
-  <!-- Spilled oats on the table -->
-  <circle cx="120" cy="285" r="2" fill="black"/>
-  <circle cx="128" cy="288" r="1.5" fill="black"/>
-  <circle cx="135" cy="284" r="1" fill="black"/>
-  <circle cx="280" cy="290" r="2" fill="black"/>
-  <circle cx="290" cy="287" r="1.5" fill="black"/>
-  
-  <!-- A spoon lying in the bowl -->
-  <line x1="250" y1="200" x2="180" y2="245" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <ellipse cx="255" cy="195" rx="12" ry="8" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" transform="rotate(-30 255 195)"/>
-  
-  <!-- Decorative swirl in corner (like a kid would doodle) -->
-  <path d="M 350 350 C 360 340 355 325 345 320 C 335 315 325 325 328 338" fill="none" stroke="black" stroke-width="1" stroke-linecap="round"/>
-  
-  <!-- Small heart doodle in corner -->
-  <path d="M 55 350 C 50 342 40 342 38 350 C 36 358 50 365 55 370 C 60 365 74 358 72 350 C 70 342 60 342 55 350" fill="none" stroke="black" stroke-width="1" stroke-linecap="round"/>
-  
+  <path d="M138 298 L150 301" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+  <path d="M182 298 L170 301" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+  <!-- Frowny mouth with teeth -->
+  <path d="M145 318 Q155 312 165 318" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <line x1="148" y1="318" x2="148" y2="322" stroke="#000" stroke-width="1.5"/>
+  <line x1="153" y1="317" x2="153" y2="321" stroke="#000" stroke-width="1.5"/>
+  <line x1="158" y1="316" x2="158" y2="320" stroke="#000" stroke-width="1.5"/>
+  <line x1="163" y1="317" x2="163" y2="321" stroke="#000" stroke-width="1.5"/>
+
+  <!-- Steam fists -->
+  <!-- Fist 1 -->
+  <path d="M120 240 Q118 220 125 210 Q130 205 135 210 Q138 200 142 205 L142 215 Q145 210 148 215 L148 225 Q150 220 148 240" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M118 235 Q110 232 108 238" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M150 230 Q155 227 157 232" stroke="#000" stroke-width="1" fill="none"/>
+  <!-- Fist 2 -->
+  <path d="M160 230 Q158 210 165 200 Q170 195 175 200 Q178 190 182 195 L182 205 Q185 200 188 205 L188 215 Q190 210 188 230" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M158 225 Q150 222 148 228" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M190 220 Q195 217 197 222" stroke="#000" stroke-width="1" fill="none"/>
+  <!-- Fist 3 -->
+  <path d="M200 245 Q198 225 205 215 Q210 210 215 215 Q218 205 222 210 L222 220 Q225 215 228 220 L228 230 Q230 225 228 245" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M198 240 Q190 237 188 243" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M230 235 Q235 232 237 237" stroke="#000" stroke-width="1" fill="none"/>
+  <!-- Motion lines near steam -->
+  <path d="M115 200 Q112 195 115 190" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M170 185 Q167 180 170 175" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M210 200 Q207 195 210 190" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Spoon in bowl -->
+  <ellipse cx="200" cy="265" rx="12" ry="6" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <line x1="206" y1="265" x2="230" y2="240" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+  <line x1="228" y1="242" x2="235" y2="235" stroke="#000" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Spilled oats on table -->
+  <ellipse cx="60" cy="285" rx="15" ry="8" stroke="#000" stroke-width="1" fill="none"/>
+  <ellipse cx="75" cy="290" rx="10" ry="5" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="55" cy="283" r="2" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="68" cy="287" r="1.5" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="72" cy="285" r="1" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Decorative swirl top-left -->
+  <path d="M20 30 Q30 20 40 30 Q50 40 40 50 Q30 60 20 50 Q10 40 20 30" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M25 35 Q30 30 35 35 Q40 40 35 45 Q30 50 25 45 Q20 40 25 35" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Heart doodle top-right -->
+  <path d="M360 25 Q365 15 375 25 Q385 35 375 50 Q365 60 360 70 Q355 60 345 50 Q335 35 345 25 Q355 15 360 25" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Arrow with label pointing to bowl -->
+  <path d="M30 180 L70 250" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="66,248 75,252 68,242" fill="#000"/>
+  <text x="15" y="170" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">THIS</text>
+  <text x="10" y="180" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">IS MY</text>
+  <text x="5" y="190" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">LIFE</text>
+  <text x="5" y="200" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">NOW</text>
+
+  <!-- Small decorative dots -->
+  <circle cx="350" cy="150" r="1.5" fill="#000"/>
+  <circle cx="355" cy="155" r="1" fill="#000"/>
+  <circle cx="345" cy="155" r="1" fill="#000"/>
+
   <!-- Caption -->
-  <text x="200" y="385" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="24" fill="black" font-weight="bold">STICKY SADNESS</text>
-  
-  <!-- Arrow pointing to bowl -->
-  <path d="M 85 120 L 120 180" stroke="black" stroke-width="1.5" stroke-linecap="round" marker-end="url(#arrowhead)"/>
-  <text x="55" y="110" font-family="Comic Sans MS, cursive" font-size="8" fill="black">lumpy!!</text>
-  
-  <!-- Arrow marker definition -->
-  <defs>
-    <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="black"/>
-    </marker>
-  </defs>
+  <text x="200" y="380" font-family="Comic Sans MS, cursive" font-size="16" text-anchor="middle" fill="#000" font-weight="bold">STICKY SADNESS</text>
 </svg>

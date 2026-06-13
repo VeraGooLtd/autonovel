@@ -1,100 +1,126 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
-  <!-- THE EVIDENCE — Detailed Diary of a Wimpy Kid style doodle -->
-  
-  <!-- Stone archway — the crime scene entrance -->
-  <!-- Left pillar -->
-  <rect x="30" y="30" width="40" height="320" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <rect x="35" y="35" width="30" height="15" fill="none" stroke="black" stroke-width="1.5"/>
-  <!-- Stone texture on pillar -->
-  <line x1="40" y1="60" x2="60" y2="60" stroke="black" stroke-width="0.5" stroke-dasharray="4 4"/>
-  <line x1="38" y1="80" x2="62" y2="80" stroke="black" stroke-width="0.5" stroke-dasharray="3 5"/>
-  <line x1="42" y1="100" x2="58" y2="100" stroke="black" stroke-width="0.5" stroke-dasharray="5 3"/>
-  <!-- Cracks in pillar -->
-  <path d="M 50 150 L 52 180 L 48 210" fill="none" stroke="black" stroke-width="0.8" stroke-dasharray="2 3"/>
-  
-  <!-- Right pillar -->
-  <rect x="330" y="30" width="40" height="320" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <rect x="335" y="35" width="30" height="15" fill="none" stroke="black" stroke-width="1.5"/>
-  <line x1="340" y1="60" x2="360" y2="60" stroke="black" stroke-width="0.5" stroke-dasharray="4 4"/>
-  <line x1="338" y1="80" x2="362" y2="80" stroke="black" stroke-width="0.5" stroke-dasharray="3 5"/>
-  <path d="M 355 200 L 358 250 L 352 290" fill="none" stroke="black" stroke-width="0.8" stroke-dasharray="2 3"/>
-  
-  <!-- Arch top -->
-  <path d="M 70 30 Q 200 -10 330 30" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Arch inner curve -->
-  <path d="M 85 35 Q 200 0 315 35" fill="none" stroke="black" stroke-width="1.5" stroke-dasharray="3 3"/>
-  <!-- Keystone -->
-  <path d="M 185 5 L 200 -5 L 215 5" fill="none" stroke="black" stroke-width="2"/>
-  <text x="200" y="12" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="6" fill="black">HIGH SPIRE</text>
-  
-  <!-- Dark interior of archway -->
-  <path d="M 70 350 L 70 50 Q 200 10 330 50 L 330 350 Z" fill="black" opacity="0.15"/>
-  <text x="200" y="200" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="16" fill="black" opacity="0.4">DANGER</text>
-  <text x="200" y="230" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="10" fill="black" opacity="0.3">or cats?</text>
-  
-  <!-- Paw-shaped mud blobs leading to arch — detailed -->
-  <!-- Large paw print (closest, bottom-right) -->
-  <ellipse cx="300" cy="310" rx="22" ry="15" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="288" cy="298" r="7" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="308" cy="293" r="7" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="322" cy="300" r="7" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <!-- Mud splatter around it -->
-  <circle cx="315" cy="325" r="3" fill="none" stroke="black" stroke-width="1"/>
-  <circle cx="290" cy="328" r="2" fill="none" stroke="black" stroke-width="1"/>
-  
-  <!-- Medium paw print (center) -->
-  <ellipse cx="230" cy="300" rx="18" ry="12" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="220" cy="290" r="6" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="235" cy="286" r="6" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="248" cy="292" r="6" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  
-  <!-- Smaller paw print (further away) -->
-  <ellipse cx="170" cy="290" rx="13" ry="9" fill="none" stroke="black" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="163" cy="282" r="4.5" fill="none" stroke="black" stroke-width="1.5"/>
-  <circle cx="174" cy="279" r="4.5" fill="none" stroke="black" stroke-width="1.5"/>
-  <circle cx="183" cy="283" r="4.5" fill="none" stroke="black" stroke-width="1.5"/>
-  
-  <!-- Tiny paw print (nearly at arch) -->
-  <ellipse cx="100" cy="295" rx="8" ry="6" fill="none" stroke="black" stroke-width="1.5"/>
-  <circle cx="95" cy="290" r="3" fill="none" stroke="black" stroke-width="1.2"/>
-  <circle cx="103" cy="288" r="3" fill="none" stroke="black" stroke-width="1.2"/>
-  
-  <!-- Extra mud splatters -->
-  <ellipse cx="260" cy="320" rx="8" ry="5" fill="none" stroke="black" stroke-width="1.5"/>
-  <circle cx="195" cy="315" r="4" fill="none" stroke="black" stroke-width="1"/>
-  <circle cx="140" cy="308" r="3" fill="none" stroke="black" stroke-width="1"/>
-  
-  <!-- Detective's hand holding magnifying glass (bottom corner) -->
-  <path d="M 340 360 Q 350 345 345 330" stroke="black" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="345" cy="325" r="3" fill="black"/> <!-- thumb -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Stone archway -->
+  <path d="M250 50 L250 300 L380 300" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M260 60 L260 290 L370 290" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Arch curve -->
+  <path d="M250 50 Q310 10 370 50" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M260 60 Q310 25 360 60" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Dark interior -->
+  <path d="M260 60 L260 290 L370 290 L370 60 Q310 25 260 60" fill="#000" opacity="0.15"/>
+  <!-- Stone blocks on arch -->
+  <path d="M255 80 L275 80 L275 95 L255 95 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M278 75 L298 75 L298 90 L278 90 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M302 72 L322 72 L322 87 L302 87 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M326 75 L346 75 L346 90 L326 90 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M350 80 L365 80 L365 95 L350 95 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M255 100 L275 100 L275 115 L255 115 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M350 100 L365 100 L365 115 L350 115 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <!-- Cracks in arch -->
+  <path d="M290 55 Q295 70 288 90 Q282 110 290 130" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M330 50 Q325 65 332 80" stroke="#000" stroke-width="0.8" fill="none"/>
+  <path d="M270 150 Q275 160 272 175" stroke="#000" stroke-width="0.8" fill="none"/>
+  <path d="M350 140 Q345 155 348 170" stroke="#000" stroke-width="0.8" fill="none"/>
+
+  <!-- Ground -->
+  <path d="M0 300 Q50 298 100 302 Q200 305 300 300 Q350 298 400 302" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Paw print trail - decreasing size -->
+  <!-- Paw print 1 (largest) -->
+  <ellipse cx="60" cy="280" rx="12" ry="10" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="50" cy="265" r="5" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="60" cy="262" r="5" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="70" cy="265" r="5" stroke="#000" stroke-width="1.5" fill="none"/>
+  <!-- Mud splatter around paw 1 -->
+  <ellipse cx="45" cy="285" rx="6" ry="4" stroke="#000" stroke-width="1" fill="none"/>
+  <ellipse cx="78" cy="278" rx="5" ry="3" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="55" cy="292" r="2" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="72" cy="290" r="1.5" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Paw print 2 -->
+  <ellipse cx="120" cy="275" rx="10" ry="8" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="112" cy="263" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="120" cy="260" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="128" cy="263" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <!-- Mud splatter -->
+  <ellipse cx="108" cy="280" rx="5" ry="3" stroke="#000" stroke-width="1" fill="none"/>
+  <ellipse cx="135" cy="272" rx="4" ry="2.5" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="115" cy="286" r="1.5" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Paw print 3 -->
+  <ellipse cx="175" cy="270" rx="9" ry="7" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="168" cy="259" r="3.5" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="175" cy="256" r="3.5" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="182" cy="259" r="3.5" stroke="#000" stroke-width="1.5" fill="none"/>
+  <!-- Mud splatter -->
+  <ellipse cx="165" cy="275" rx="4" ry="2.5" stroke="#000" stroke-width="1" fill="none"/>
+  <ellipse cx="188" cy="268" rx="3.5" ry="2" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Paw print 4 -->
+  <ellipse cx="225" cy="268" rx="8" ry="6" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="219" cy="258" r="3" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="225" cy="255" r="3" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="231" cy="258" r="3" stroke="#000" stroke-width="1.5" fill="none"/>
+  <!-- Mud splatter -->
+  <ellipse cx="216" cy="273" rx="3.5" ry="2" stroke="#000" stroke-width="1" fill="none"/>
+  <ellipse cx="237" cy="265" rx="3" ry="2" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Paw print 5 (smallest, near arch) -->
+  <ellipse cx="260" cy="275" rx="6" ry="5" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="255" cy="267" r="2.5" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="260" cy="265" r="2.5" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="265" cy="267" r="2.5" stroke="#000" stroke-width="1.5" fill="none"/>
+
+  <!-- Detective hand holding magnifying glass -->
+  <!-- Hand -->
+  <path d="M140 200 Q135 190 140 180 Q145 175 150 180 L155 175 Q160 170 162 175 L160 185 Q165 180 168 185 L165 195 Q170 192 172 198 L168 210" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Fingers -->
+  <path d="M150 180 Q148 172 152 168" stroke="#000" stroke-width="1.5" fill="none"/>
+  <path d="M155 175 Q155 167 158 164" stroke="#000" stroke-width="1.5" fill="none"/>
+  <path d="M162 175 Q163 167 166 165" stroke="#000" stroke-width="1.5" fill="none"/>
+  <path d="M168 185 Q170 178 173 176" stroke="#000" stroke-width="1.5" fill="none"/>
+  <!-- Thumb -->
+  <path d="M140 200 Q130 195 128 188 Q127 182 132 180" stroke="#000" stroke-width="1.5" fill="none"/>
   <!-- Magnifying glass -->
-  <circle cx="360" cy="340" r="18" fill="none" stroke="black" stroke-width="2.5"/>
-  <line x1="370" y1="355" x2="385" y2="375" stroke="black" stroke-width="3" stroke-linecap="round"/>
-  <!-- Glint in magnifying glass -->
-  <circle cx="355" cy="335" r="2" fill="none" stroke="black" stroke-width="0.8"/>
-  
-  <!-- Clue tag on the ground near trails -->
-  <rect x="245" y="275" width="35" height="20" fill="white" stroke="black" stroke-width="1.5" transform="rotate(-5 262 285)"/>
-  <text x="262" y="288" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="6" fill="black" transform="rotate(-5 262 288)">CLUE #1</text>
-  
-  <!-- Arrow pointing to trail -->
-  <path d="M 180 340 L 190 310" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-  <text x="165" y="355" font-family="Comic Sans MS, cursive" font-size="7" fill="black">mud trail!</text>
-  
-  <!-- Small beetle on the ground -->
-  <ellipse cx="280" cy="340" rx="6" ry="4" fill="none" stroke="black" stroke-width="0.8"/>
-  <circle cx="276" cy="338" r="2" fill="none" stroke="black" stroke-width="0.8"/>
-  <line x1="274" y1="337" x2="270" y2="335" stroke="black" stroke-width="0.5"/>
-  
+  <circle cx="175" cy="160" r="18" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <line x1="162" y1="173" x2="148" y2="195" stroke="#000" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Glass reflection -->
+  <path d="M168 150 Q172 148 175 152" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Clue tag label -->
+  <rect x="80" y="140" width="45" height="25" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <line x1="85" y1="150" x2="120" y2="150" stroke="#000" stroke-width="1"/>
+  <text x="85" y="148" font-family="Comic Sans MS, cursive" font-size="6" fill="#000">CLUE #1</text>
+  <text x="85" y="160" font-family="Comic Sans MS, cursive" font-size="5" fill="#000">MUD = CAT</text>
+  <!-- String on tag -->
+  <path d="M102 140 Q102 130 108 125" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Arrow with label -->
+  <path d="M30 250 L50 270" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="46,268 52,272 48,264" fill="#000"/>
+  <text x="5" y="245" font-family="Comic Sans MS, cursive" font-size="7" fill="#000">THE</text>
+  <text x="5" y="254" font-family="Comic Sans MS, cursive" font-size="7" fill="#000">TRAIL!</text>
+
+  <!-- Small beetle -->
+  <ellipse cx="320" cy="290" rx="5" ry="3" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="316" cy="288" r="2" stroke="#000" stroke-width="1" fill="none"/>
+  <line x1="315" y1="287" x2="312" y2="284" stroke="#000" stroke-width="0.8"/>
+  <line x1="317" y1="287" x2="316" y2="283" stroke="#000" stroke-width="0.8"/>
+  <line x1="324" y1="288" x2="327" y2="285" stroke="#000" stroke-width="0.8"/>
+  <line x1="325" y1="289" x2="328" y2="287" stroke="#000" stroke-width="0.8"/>
+  <line x1="324" y1="291" x2="327" y2="292" stroke="#000" stroke-width="0.8"/>
+  <line x1="317" y1="292" x2="316" y2="294" stroke="#000" stroke-width="0.8"/>
+
+  <!-- Grass tufts -->
+  <path d="M30 300 Q32 288 35 300 Q37 285 40 300" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M90 300 Q92 290 95 300 Q97 287 100 300" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M300 300 Q302 290 305 300 Q307 286 310 300" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M350 300 Q352 288 355 300 Q357 285 360 300" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M180 300 Q182 292 185 300" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+
+  <!-- Small decorative stars -->
+  <path d="M370 100 L372 95 L374 100 L379 102 L374 104 L372 109 L370 104 L365 102 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M30 100 L32 96 L34 100 L38 101 L34 103 L32 107 L30 103 L26 101 Z" stroke="#000" stroke-width="1" fill="none"/>
+
   <!-- Caption -->
-  <text x="200" y="385" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="24" fill="black" font-weight="bold">THE EVIDENCE</text>
-  
-  <!-- Decorative corner elements -->
-  <!-- Question marks floating -->
-  <text x="30" y="380" font-family="Comic Sans MS, cursive" font-size="12" fill="black">???</text>
-  
-  <!-- Small magnifying glass in corner -->
-  <circle cx="370" y="20" r="10" fill="none" stroke="black" stroke-width="1"/>
-  <line x1="377" y1="27" x2="385" y2="38" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="200" y="385" font-family="Comic Sans MS, cursive" font-size="16" text-anchor="middle" fill="#000" font-weight="bold">THE EVIDENCE</text>
 </svg>
