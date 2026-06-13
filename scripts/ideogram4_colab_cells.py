@@ -1,0 +1,84 @@
+# ============================================================
+# IDEOGRAM 4 COVER GENERATION
+# ============================================================
+# Copy each section (between === lines) into a separate Colab cell
+# Run cells in order: Shift+Enter
+
+# ============================================================
+# CELL 1: Install Dependencies
+# ============================================================
+
+!pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cu124
+!pip install -q git+https://github.com/huggingface/diffusers.git
+!pip install -q transformers accelerate safetensors huggingface_hub
+!pip install -q peft omegaconf
+
+print('Dependencies installed!')
+
+# ============================================================
+# CELL 2: Login to HuggingFace
+# ============================================================
+
+from huggingface_hub import login
+login()  # Get free token at https://huggingface.co/settings/tokens
+
+# ============================================================
+# CELL 3: Load Ideogram 4 Model
+# ============================================================
+
+import torch, os, time
+from diffusers import Ideogram4Pipeline
+
+print('Downloading Ideogram 4 (nf4) model...')
+
+pipe = Ideogram4Pipeline.from_pretrained(
+    'ideogram-ai/ideogram-4-nf4',
+    torch_dtype=torch.bfloat16,
+    trust_remote_code=True,
+)
+pipe.to('cuda')
+
+print('Ideogram 4 loaded! GPU:', torch.cuda.get_device_name(0))
+
+# ============================================================
+# CELL 4: Generate All 11 Ebook Covers
+# ============================================================
+
+OUTPUT = '/content/covers'
+os.makedirs(OUTPUT, exist_ok=True)
+
+covers = [
+    ('the-genesis-engine', 'The Genesis Engine', 'Middle grade sci-fi book cover 1600x2400. Title The Genesis Engine bold futuristic font top. Author Daniel Ryan bottom. Fungal spore pod on Mars Earth in orange sky. Clean bold cartoonish. No text errors.'),
+    ('the-martian-spore', 'The Martian Spore', 'Middle grade sci-fi book cover 1600x2400. Title The Martian Spore bold futuristic font top. Author Daniel Ryan bottom. Cracked Mars soil green mycelium. Clean bold cartoonish. No text errors.'),
+    ('the-crimson-bloom', 'The Crimson Bloom', 'Middle grade sci-fi book cover 1600x2400. Title The Crimson Bloom bold futuristic font top. Author Daniel Ryan bottom. Crimson bloom on Mars from space spiral. Clean bold cartoonish. No text errors.'),
+    ('sporefall', 'Sporefall', 'YA sci-fi horror book cover 1600x2400. Title Sporefall distressed grunge font top. Author Daniel Ryan bottom. Fungal fruiting body dark rainforest. Dark atmospheric stylized. No text errors.'),
+    ('mycelial-tide', 'Mycelial Tide', 'YA sci-fi horror book cover 1600x2400. Title Mycelial Tide distressed grunge font top. Author Daniel Ryan bottom. Mycelium wall consuming city street. Dark atmospheric stylized. No text errors.'),
+    ('mycelial-earth', 'Mycelial Earth', 'YA sci-fi horror book cover 1600x2400. Title Mycelial Earth distressed grunge font top. Author Daniel Ryan bottom. Earth from space fungal web. Epic scale. Dark atmospheric stylized. No text errors.'),
+    ('the-salami-saboteur', 'The Salami Saboteur', 'Middle grade mystery humor book cover 1600x2400. Title The Salami Saboteur playful handwritten font top. Author Daniel Ryan bottom. Hand-drawn doodle Diary of a Wimpy Kid style. Ginger cat domino mask salami. Girl glasses bulldog shocked. White background. No text errors.'),
+    ('the-glass-vaults-gambit', 'The Glass Vaults Gambit', 'Middle grade mystery humor book cover 1600x2400. Title The Glass Vaults Gambit playful handwritten font top. Author Daniel Ryan bottom. Hand-drawn doodle Diary of a Wimpy Kid style. Mall night laser grid. Ginger cat turtleneck air duct. White background. No text errors.'),
+    ('station-zero', 'Station Zero', 'YA sci-fi book cover 1600x2400. Title Station Zero bold futuristic font top. Author Daniel Ryan bottom. Derelict space station deep space. Shuttle approaching. Clean sci-fi. No text errors.'),
+    ('the-echo-chamber', 'The Echo Chamber', 'YA sci-fi thriller book cover 1600x2400. Title The Echo Chamber bold tech-thriller font top. Author Daniel Ryan bottom. Face in phone AI avatar reflection. Glitch effects. Cyberpunk aesthetic. No text errors.'),
+    ('the-silent-strata', 'The Silent Strata', 'YA sci-fi book cover 1600x2400. Title The Silent Strata bold futuristic font top. Author Daniel Ryan bottom. Earth cross-section geological layers. Alien structure glowing deep. Clean sci-fi. No text errors.'),
+]
+
+for i, (slug, title, prompt) in enumerate(covers, 1):
+    print(f'[{i}/{len(covers)}] {title}...')
+    try:
+        img = pipe(prompt=prompt, width=1600, height=2400, num_inference_steps=30, guidance_scale=7.5).images[0]
+        img.save(f'{OUTPUT}/{slug}-ebook-cover.png')
+        print(f'  OK')
+    except Exception as e:
+        print(f'  FAIL: {e}')
+
+print('Generation complete!')
+
+# ============================================================
+# CELL 5: Download All Covers as ZIP
+# ============================================================
+
+import shutil
+from google.colab import files
+
+shutil.make_archive('/content/covers_all', 'zip', OUTPUT)
+files.download('/content/covers_all.zip')
+print('Downloaded covers_all.zip')
