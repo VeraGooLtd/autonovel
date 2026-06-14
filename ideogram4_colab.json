@@ -3,7 +3,9 @@
     {
       "cell_type": "markdown",
       "metadata": {},
-      "source": ["# Ideogram 4 Cover Generation for D2D Publishing"]
+      "source": [
+        "# Ideogram 4 Cover Generation for D2D Publishing"
+      ]
     },
     {
       "cell_type": "code",
@@ -34,6 +36,19 @@
         "pipe = DiffusionPipeline.from_pretrained('ideogram-ai/ideogram-4-nf4', torch_dtype=torch.bfloat16)",
         "pipe.to('cuda')",
         "print('Model loaded!')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import csv\n",
+        "manifest_path = '/content/covers/manifest.csv'\n",
+        "print('Manifest expected:', manifest_path)\n",
+        "print('Generated PNGs:')\n",
+        "for name in sorted(__import__('os').listdir('/content/covers')):\n",
+        "    if name.endswith('-ebook-cover.png'):\n",
+        "        print(' -', name)\n"
       ]
     },
     {
