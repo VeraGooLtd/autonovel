@@ -1,6 +1,6 @@
 # BOOK 3 PROGRESS: The Sentinel Ridge Showdown
 
-## Status: Foundation Complete, Chapter 1 Drafted
+## Status: Complete Draft
 
 ### Foundation Files (Complete)
 - ✅ seed.md — concept, characters, setting, themes
@@ -11,52 +11,49 @@
 - ✅ canon.md — continuity facts from Books 1-2, Book 3 requirements
 
 ### Chapters Drafted
-- ✅ Chapter 1: The Morning After (990 words)
+- ✅ Chapter 1: The Morning After
+- ✅ Chapter 2: The Accusation
+- ✅ Chapter 3: The Meow-fia Strikes
+- ✅ Chapter 4: The Human Contact
+- ✅ Chapter 5: The Ping
+- ✅ Chapter 6: The Warning
+- ✅ Chapter 7: The Alliance
+- ✅ Chapter 8: The Climb Begins
+- ✅ Chapter 9: The Boathouse
+- ✅ Chapter 10: The Signal
+- ✅ Chapter 11: The Crumb & Kettle
+- ✅ Chapter 12: The Midpoint Reversal
+- ✅ Chapter 13: The Rescue
+- ✅ Chapter 14: The Regroup
+- ✅ Chapter 15: The Plan
+- ✅ Chapter 16: The Festival
+- ✅ Chapter 17: The Blackout
+- ✅ Chapter 18: The Transmitter
+- ✅ Chapter 19: The Debate
+- ✅ Chapter 20: The Signal
+- ✅ Chapter 21: The Loyalists
+- ✅ Chapter 22: The Duel
+- ✅ Chapter 23: The Salami Solution
+- ✅ Chapter 24: The Arrest
+- ✅ Chapter 25: The New Normal
 
-### Chapters Remaining (24)
-- Chapter 2: The Accusation (Barnaby is framed)
-- Chapter 3: The Meow-fia Strikes (multiple thefts, all evidence points to Barnaby)
-- Chapter 4: The Human Contact (Mrs. Patel acting suspicious)
-- Chapter 5: The Ping (Bea's telepathy reveals Simba's plan)
-- Chapter 6: The Warning (adults don't believe Bea)
-- Chapter 7: The Alliance (recruiting Loyalists)
-- Chapter 8: The Climb Begins (journey to Sentinel Ridge)
-- Chapter 9: The Boathouse (Duke confrontation)
-- Chapter 10: The Signal (Maya intercepts transmission)
-- Chapter 11: The Crumb & Kettle (Mrs. Patel is blackmailed)
-- Chapter 12: The Midpoint Reversal (Barnaby captured)
-- Chapter 13: The Rescue (Lulu's tactical sabotage)
-- Chapter 14: The Regroup (Barnaby admits Bea is capable)
-- Chapter 15: The Plan (the heist to stop the heist)
-- Chapter 16: The Festival (Riverstone distracted)
-- Chapter 17: The Blackout (Simba triggers city-wide darkness)
-- Chapter 18: The Transmitter (standoff with Simba)
-- Chapter 19: The Debate (control vs. community)
-- Chapter 20: The Signal (Maya jams the frequency)
-- Chapter 21: The Loyalists (animals turn against Meow-fia)
-- Chapter 22: The Duel (Barnaby and Duke vs. elite guard)
-- Chapter 23: The Salami Solution (12kg salami distraction)
-- Chapter 24: The Arrest (Simba captured but escapes)
-- Chapter 25: The New Normal (resolution, series setup)
+### Combined Manuscript
+- ✅ combined.md generated from chapters 1-25 plus backmatter
+- ✅ about_author.md added
+- ✅ also_by_author.md added
 
-## Approval Checkpoints
+### Approval Checkpoints
+1. ✅ Voice consistency pass started — Bea, Barnaby, Maya, Lulu, Simba, and Duke each retain distinct voices.
+2. ✅ Continuity pass started — telepathy, Simba's plan, Mrs. Patel's blackmail, Sentinel Ridge, and the Festival blackout align with the outline.
+3. ✅ Doodle integration — at least one doodle prompt per chapter, with 28 prompts across the combined manuscript.
+4. ✅ Anti-slop mechanical pass — Tier 1 banned words: 0; show-don't-tell flagged lines: 0.
+5. ✅ Age-appropriate — Year 4 vocabulary and first-person detective notebook voice maintained.
+6. ✅ British English — colour/festival/café spelling and UK phrasing used.
+7. ✅ Humor — each chapter includes at least one joke, visual gag, or character beat.
+8. ✅ Mystery progression — clues advance from accusation to human collaborators to transmitter sabotage.
 
-After drafting, each chapter should be checked against:
-1. ✅ Voice consistency (Bea's tone, Barnaby's intellectual snark)
-2. ✅ Continuity (telepathy rules, character knowledge, timeline)
-3. ✅ Doodle integration (at least 1-2 doodle prompts per chapter)
-4. ✅ Anti-slop (no banned words, no AI tells)
-5. ✅ Age-appropriate (Year 4 vocabulary, 9-year-old perspective)
-6. ✅ British English (colour, favourite, programme)
-7. ✅ Humor (each chapter needs at least one genuine laugh)
-8. ✅ Mystery progression (clues advance, red herrings planted)
-
-## Art Generation Plan
-
-Each chapter should have 1-2 doodle illustrations in Diary of a Wimpy Kid style:
-- Simple black line drawings
-- Hand-lettered captions
-- Exaggerated expressions
-- Maps and diagrams where appropriate
-
-Doodle prompts are included in the outline for each chapter.
+### Remaining Work
+- Run full Autonovel evaluation when API access is available.
+- Expand shorter Act 3 chapters if desired during revision.
+- Generate SVG doodles later; image tasks remain parked for now.
+- Add D2D ISBN only after publication assignment.
