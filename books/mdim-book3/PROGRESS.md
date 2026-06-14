@@ -55,6 +55,6 @@
 ### Remaining Work
 - Full LLM-based Autonovel evaluation is still pending until API access is available.
 - Mechanical Autonovel slop evaluation has been run successfully with 0 penalty.
-- Act 3 chapters 20-25 have been expanded during revision.
+- Act 3 chapters 20-23 have been expanded during revision; chapters 24-25 were reviewed and retained.
 - Generate SVG doodles later; image tasks remain parked for now.
 - Add D2D ISBN only after publication assignment.
