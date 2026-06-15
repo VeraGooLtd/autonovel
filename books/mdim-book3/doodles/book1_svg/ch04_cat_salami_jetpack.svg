@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Sky background clouds -->
+  <path d="M30 40 Q40 25 55 35 Q65 20 80 35 Q90 25 100 40" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M150 60 Q160 45 175 55 Q185 42 200 55 Q210 48 220 60" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M300 35 Q310 20 325 30 Q335 18 350 30 Q360 22 370 35" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Speed lines behind cat -->
+  <line x1="50" y1="140" x2="90" y2="140" stroke="#000" stroke-width="1" stroke-linecap="round"/>
+  <line x1="60" y1="155" x2="100" y2="155" stroke="#000" stroke-width="1" stroke-linecap="round"/>
+  <line x1="55" y1="125" x2="95" y2="125" stroke="#000" stroke-width="1" stroke-linecap="round"/>
+  <line x1="65" y1="170" x2="95" y2="168" stroke="#000" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Salami jetpack -->
+  <!-- Salami body -->
+  <path d="M155 130 Q150 125 150 115 Q150 105 155 100 Q160 95 170 95 Q180 95 185 100 Q190 105 190 115 Q190 125 185 130" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M155 130 Q150 135 150 145 Q150 155 155 160 Q160 165 170 165 Q180 165 185 160 Q190 155 190 145 Q190 135 185 130" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Salami fat marbling -->
+  <path d="M160 110 Q165 108 168 112 Q172 116 168 120" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M175 105 Q178 108 176 112 Q174 115 178 118" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M162 140 Q166 138 170 142 Q168 146 172 148" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M178 135 Q182 138 180 142" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M165 150 Q168 148 172 152" stroke="#000" stroke-width="1" fill="none"/>
+  <!-- Salami ties -->
+  <path d="M158 118 Q152 116 150 120 Q148 124 152 126" stroke="#000" stroke-width="1.5" fill="none"/>
+  <path d="M182 142 Q188 140 190 144 Q192 148 188 150" stroke="#000" stroke-width="1.5" fill="none"/>
+
+  <!-- Straps with buckles -->
+  <path d="M160 130 Q170 140 175 155 Q178 165 180 175" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M180 130 Q170 140 165 155 Q162 165 160 175" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Buckles -->
+  <rect x="168" y="148" width="8" height="6" stroke="#000" stroke-width="1.5" fill="none"/>
+  <rect x="172" y="158" width="8" height="6" stroke="#000" stroke-width="1.5" fill="none"/>
+
+  <!-- Cat body -->
+  <ellipse cx="170" cy="180" rx="16" ry="14" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Cat head -->
+  <circle cx="170" cy="160" r="12" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Cat ears -->
+  <path d="M160 150 L156 136 L165 148" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <path d="M180 150 L184 136 L175 148" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Inner ear -->
+  <path d="M159 147 L157 139 L163 146" stroke="#000" stroke-width="1" fill="none"/>
+  <path d="M181 147 L183 139 L177 146" stroke="#000" stroke-width="1" fill="none"/>
+  <!-- Cat eyes - wide open screaming -->
+  <circle cx="165" cy="157" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="175" cy="157" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="165" cy="157" r="2" fill="#000"/>
+  <circle cx="175" cy="157" r="2" fill="#000"/>
+  <!-- Cat nose -->
+  <path d="M168 161 L170 163 L172 161" stroke="#000" stroke-width="1" fill="none"/>
+  <!-- Cat mouth - open screaming -->
+  <ellipse cx="170" cy="167" rx="5" ry="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <path d="M167 169 L173 169" stroke="#000" stroke-width="1"/>
+  <!-- Whiskers -->
+  <line x1="158" y1="159" x2="142" y2="154" stroke="#000" stroke-width="1"/>
+  <line x1="158" y1="162" x2="140" y2="162" stroke="#000" stroke-width="1"/>
+  <line x1="158" y1="165" x2="142" y2="170" stroke="#000" stroke-width="1"/>
+  <line x1="182" y1="159" x2="198" y2="154" stroke="#000" stroke-width="1"/>
+  <line x1="182" y1="162" x2="200" y2="162" stroke="#000" stroke-width="1"/>
+  <line x1="182" y1="165" x2="198" y2="170" stroke="#000" stroke-width="1"/>
+  <!-- Cat legs dangling -->
+  <path d="M160 192 Q158 200 155 205" stroke="#000" stroke-width="1.5" fill="none"/>
+  <path d="M180 192 Q182 200 185 205" stroke="#000" stroke-width="1.5" fill="none"/>
+  <!-- Cat tail streaming behind -->
+  <path d="M186 180 Q200 175 210 165 Q218 155 215 145" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Exhaust trail with smoke puffs -->
+  <path d="M170 210 Q168 225 172 240 Q169 255 171 270" stroke="#000" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+  <circle cx="170" cy="215" r="6" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="172" cy="230" r="8" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="169" cy="248" r="10" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="172" cy="265" r="7" stroke="#000" stroke-width="1" fill="none"/>
+  <ellipse cx="168" cy="220" rx="4" ry="3" stroke="#000" stroke-width="0.8" fill="none"/>
+  <ellipse cx="174" cy="240" rx="5" ry="4" stroke="#000" stroke-width="0.8" fill="none"/>
+  <ellipse cx="170" cy="258" rx="6" ry="4" stroke="#000" stroke-width="0.8" fill="none"/>
+
+  <!-- Ground / picnic scene -->
+  <path d="M0 310 Q50 305 100 312 Q200 318 300 308 Q350 304 400 310" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Picnic blanket -->
+  <path d="M250 310 L250 340 L340 340 L340 310" stroke="#000" stroke-width="1.5" fill="none"/>
+  <line x1="260" y1="310" x2="260" y2="340" stroke="#000" stroke-width="0.8"/>
+  <line x1="280" y1="310" x2="280" y2="340" stroke="#000" stroke-width="0.8"/>
+  <line x1="300" y1="310" x2="300" y2="340" stroke="#000" stroke-width="0.8"/>
+  <line x1="320" y1="310" x2="320" y2="340" stroke="#000" stroke-width="0.8"/>
+  <line x1="250" y1="320" x2="340" y2="320" stroke="#000" stroke-width="0.8"/>
+  <line x1="250" y1="330" x2="340" y2="330" stroke="#000" stroke-width="0.8"/>
+  <!-- Picnic items -->
+  <circle cx="270" cy="305" r="8" stroke="#000" stroke-width="1.5" fill="none"/>
+  <rect x="290" y="298" width="15" height="12" stroke="#000" stroke-width="1.5" fill="none"/>
+  <path d="M315 310 L315 300 L325 300 L325 310" stroke="#000" stroke-width="1.5" fill="none"/>
+
+  <!-- Tiny people on ground looking up -->
+  <!-- Person 1 -->
+  <circle cx="80" cy="295" r="5" stroke="#000" stroke-width="1.5" fill="none"/>
+  <line x1="80" y1="300" x2="80" y2="315" stroke="#000" stroke-width="1.5"/>
+  <line x1="80" y1="305" x2="73" y2="310" stroke="#000" stroke-width="1.5"/>
+  <line x1="80" y1="305" x2="87" y2="310" stroke="#000" stroke-width="1.5"/>
+  <line x1="80" y1="315" x2="74" y2="322" stroke="#000" stroke-width="1.5"/>
+  <line x1="80" y1="315" x2="86" y2="322" stroke="#000" stroke-width="1.5"/>
+  <!-- Arm pointing up -->
+  <line x1="87" y1="305" x2="95" y2="290" stroke="#000" stroke-width="1.5"/>
+  <!-- Looking up - mouth open -->
+  <path d="M78 293 Q80 291 82 293" stroke="#000" stroke-width="1" fill="none"/>
+
+  <!-- Person 2 -->
+  <circle cx="110" cy="298" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <line x1="110" y1="302" x2="110" y2="314" stroke="#000" stroke-width="1.5"/>
+  <line x1="110" y1="307" x2="104" y2="311" stroke="#000" stroke-width="1.5"/>
+  <line x1="110" y1="307" x2="116" y2="311" stroke="#000" stroke-width="1.5"/>
+  <line x1="110" y1="314" x2="105" y2="320" stroke="#000" stroke-width="1.5"/>
+  <line x1="110" y1="314" x2="115" y2="320" stroke="#000" stroke-width="1.5"/>
+  <line x1="116" y1="307" x2="122" y2="295" stroke="#000" stroke-width="1.5"/>
+
+  <!-- Person 3 -->
+  <circle cx="260" cy="300" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <line x1="260" y1="304" x2="260" y2="316" stroke="#000" stroke-width="1.5"/>
+  <line x1="260" y1="309" x2="254" y2="313" stroke="#000" stroke-width="1.5"/>
+  <line x1="260" y1="309" x2="266" y2="313" stroke="#000" stroke-width="1.5"/>
+  <line x1="260" y1="316" x2="255" y2="322" stroke="#000" stroke-width="1.5"/>
+  <line x1="260" y1="316" x2="265" y2="322" stroke="#000" stroke-width="1.5"/>
+  <line x1="266" y1="309" x2="272" y2="298" stroke="#000" stroke-width="1.5"/>
+
+  <!-- Speech bubble from person -->
+  <ellipse cx="100" cy="270" rx="25" ry="12" fill="none" stroke="#000" stroke-width="1.5"/>
+  <path d="M90 280 Q85 285 92 278" stroke="#000" stroke-width="1" fill="none"/>
+  <text x="82" y="268" font-family="Comic Sans MS, cursive" font-size="6" fill="#000">WHAT IS</text>
+  <text x="82" y="276" font-family="Comic Sans MS, cursive" font-size="6" fill="#000">THAT?!</text>
+
+  <!-- Trees in background -->
+  <line x1="20" y1="310" x2="20" y2="280" stroke="#000" stroke-width="2"/>
+  <path d="M20 280 Q10 265 20 255 Q30 265 20 280" stroke="#000" stroke-width="1.5" fill="none"/>
+  <path d="M20 265 Q8 250 20 240 Q32 250 20 265" stroke="#000" stroke-width="1.5" fill="none"/>
+
+  <line x1="380" y1="310" x2="380" y2="285" stroke="#000" stroke-width="2"/>
+  <path d="M380 285 Q372 272 380 262 Q388 272 380 285" stroke="#000" stroke-width="1.5" fill="none"/>
+
+  <!-- Caption -->
+  <text x="200" y="385" font-family="Comic Sans MS, cursive" font-size="16" text-anchor="middle" fill="#000" font-weight="bold">SALAMI JETPACK</text>
+</svg>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+
+  <!-- Science fair table -->
+  <rect x="40" y="200" width="320" height="15" fill="none" stroke="black" stroke-width="2.5"/>
+  <rect x="50" y="215" width="10" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <rect x="340" y="215" width="10" height="50" fill="none" stroke="black" stroke-width="2"/>
+  <!-- "SCIENCE FAIR" banner -->
+  <rect x="120" y="50" width="160" height="25" fill="white" stroke="black" stroke-width="2"/>
+  <text x="200" y="67" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="12" fill="black">SCIENCE FAIR</text>
+  <!-- Cat-Dar device on table -->
+  <rect x="150" y="120" width="100" height="80" fill="none" stroke="black" stroke-width="2.5"/>
+  <!-- Antenna -->
+  <line x1="200" y1="120" x2="200" y2="70" stroke="black" stroke-width="2.5"/>
+  <circle cx="200" cy="65" r="5" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Dish -->
+  <path d="M 170 85 Q 200 60 230 85" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Dials and buttons -->
+  <circle cx="175" cy="150" r="8" fill="none" stroke="black" stroke-width="1.5"/>
+  <line x1="175" y1="150" x2="175" y2="142" stroke="black" stroke-width="1.5"/>
+  <circle cx="225" cy="150" r="8" fill="none" stroke="black" stroke-width="1.5"/>
+  <line x1="225" y1="150" x2="230" y2="145" stroke="black" stroke-width="1.5"/>
+  <rect x="185" y="170" width="30" height="15" fill="none" stroke="black" stroke-width="1.5"/>
+  <text x="200" y="181" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="6" fill="black">CAT-DAR</text>
+  <!-- Screen -->
+  <rect x="165" y="130" width="70" height="25" fill="none" stroke="black" stroke-width="1.5"/>
+  <text x="200" y="147" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="6" fill="black">BEEP BEEP</text>
+  <!-- Blinking light -->
+  <circle cx="240" cy="135" r="3" fill="black"/>
+  <!-- Maya standing behind device -->
+  <circle cx="200" cy="100" r="15" fill="none" stroke="black" stroke-width="2.5"/>
+  <!-- Safety goggles -->
+  <rect x="190" y="93" width="20" height="10" fill="none" stroke="black" stroke-width="2"/>
+  <circle cx="195" cy="98" r="4" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="205" cy="98" r="4" fill="none" stroke="black" stroke-width="1.5"/>
+  <!-- Maya's intense expression -->
+  <circle cx="194" cy="97" r="2" fill="black"/>
+  <circle cx="206" cy="97" r="2" fill="black"/>
+  <path d="M 195 108 Q 200 112 205 108" stroke="black" stroke-width="2"/>
+  <!-- Maya's body -->
+  <ellipse cx="200" cy="130" rx="12" ry="18" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Mr. Hendricks looking confused -->
+  <circle cx="300" cy="140" r="12" fill="none" stroke="black" stroke-width="2"/>
+  <!-- Confused eyes -->
+  <circle cx="295" cy="136" r="2" fill="black"/>
+  <circle cx="305" cy="136" r="2" fill="black"/>
+  <!-- Confused mouth -->
+  <path d="M 295 148 Q 300 145 305 148" fill="none" stroke="black" stroke-width="1.5"/>
+  <!-- Question marks -->
+  <text x="315" y="130" font-family="Comic Sans MS, cursive" font-size="10" fill="black">???</text>
+  <!-- Other science projects in background -->
+  <rect x="60" y="150" width="40" height="50" fill="none" stroke="black" stroke-width="1.5"/>
+  <text x="80" y="170" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="5" fill="black">volcano</text>
+  <rect x="300" y="150" width="40" height="50" fill="none" stroke="black" stroke-width="1.5"/>
+  <text x="320" y="170" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="5" fill="black">plants</text>
+  <!-- Arrow pointing to Cat-Dar -->
+  <path d="M 280 100 L 230 130" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="285" y="95" font-family="Comic Sans MS, cursive" font-size="7" fill="black">my project!</text>
+
+  <text x="200" y="385" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="24" fill="black" font-weight="bold">CAT-DAR 3000</text>
+</svg>

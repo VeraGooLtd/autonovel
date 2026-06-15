@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+
+  <!-- Museum room -->
+  <rect x="40" y="40" width="320" height="280" fill="none" stroke="black" stroke-width="2.5"/>
+  <!-- Sensor beams (red lines) -->
+  <line x1="60" y1="60" x2="60" y2="320" stroke="black" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="120" y1="60" x2="120" y2="320" stroke="black" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="180" y1="60" x2="180" y2="320" stroke="black" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="240" y1="60" x2="240" y2="320" stroke="black" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="300" y1="60" x2="300" y2="320" stroke="black" stroke-width="1" stroke-dasharray="2 2"/>
+  <!-- Horizontal beams -->
+  <line x1="40" y1="120" x2="360" y2="120" stroke="black" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="40" y1="200" x2="360" y2="200" stroke="black" stroke-width="1" stroke-dasharray="2 2"/>
+  <line x1="40" y1="280" x2="360" y2="280" stroke="black" stroke-width="1" stroke-dasharray="2 2"/>
+  <!-- Giant salami blocking beams -->
+  <ellipse cx="200" cy="180" rx="70" ry="40" fill="none" stroke="black" stroke-width="3"/>
+  <circle cx="170" cy="170" r="5" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="200" cy="165" r="4" fill="none" stroke="black" stroke-width="1.5"/>
+  <circle cx="230" cy="175" r="3" fill="none" stroke="black" stroke-width="1"/>
+  <!-- Barnaby sitting on salami like a king -->
+  <circle cx="200" cy="140" r="15" fill="none" stroke="black" stroke-width="2.5"/>
+  <circle cx="194" cy="135" r="2.5" fill="black"/>
+  <circle cx="206" cy="135" r="2.5" fill="black"/>
+  <path d="M 195 150 Q 200 158 205 150" stroke="black" stroke-width="2"/>
+  <!-- Crown -->
+  <path d="M 182 125 L 188 112 L 194 122 L 200 108 L 206 122 L 212 112 L 218 125" fill="none" stroke="black" stroke-width="1.5"/>
+  <!-- Cats running in panic -->
+  <circle cx="80" cy="250" r="8" fill="none" stroke="black" stroke-width="1.5"/>
+  <line x1="75" y1="240" x2="70" y2="225" stroke="black" stroke-width="1"/>
+  <circle cx="320" cy="260" r="8" fill="none" stroke="black" stroke-width="1.5"/>
+  <line x1="325" y1="250" x2="330" y2="235" stroke="black" stroke-width="1"/>
+  <circle cx="100" cy="300" r="6" fill="none" stroke="black" stroke-width="1.2"/>
+  <circle cx="300" cy="290" r="6" fill="none" stroke="black" stroke-width="1.2"/>
+  <!-- Sweat drops on cats -->
+  <ellipse cx="90" cy="240" rx="2" ry="3" fill="none" stroke="black" stroke-width="0.8"/>
+  <ellipse cx="335" y="250" rx="2" ry="3" fill="none" stroke="black" stroke-width="0.8"/>
+  <!-- Alarm lights -->
+  <circle cx="60" cy="55" r="5" fill="black"/>
+  <circle cx="340" cy="55" r="5" fill="black"/>
+  <!-- "INTRUDER" text -->
+  <text x="200" y="340" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="12" fill="black">⚠ INTRUDER ⚠</text>
+
+  <text x="200" y="385" text-anchor="middle" font-family="Comic Sans MS, cursive" font-size="24" fill="black" font-weight="bold">SALAMI SABOTAGE</text>
+</svg>

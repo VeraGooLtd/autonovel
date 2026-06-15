@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Paper background with slight aging -->
+  <rect x="40" y="30" width="320" height="340" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <rect x="45" y="35" width="310" height="330" stroke="#000" stroke-width="1" fill="none" stroke-linecap="round"/>
+
+  <!-- Spiral binding holes and rings -->
+  <circle cx="55" cy="55" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="55" cy="85" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="55" cy="115" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="55" cy="145" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="55" cy="175" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="55" cy="205" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="55" cy="235" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="55" cy="265" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="55" cy="295" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="55" cy="325" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <!-- Spiral wire -->
+  <path d="M51 55 Q48 70 51 85 Q54 100 51 115 Q48 130 51 145 Q54 160 51 175 Q48 190 51 205 Q54 220 51 235 Q48 250 51 265 Q54 280 51 295 Q48 310 51 325 Q54 340 51 355" stroke="#000" stroke-width="1.5" fill="none"/>
+
+  <!-- Title -->
+  <text x="200" y="60" font-family="Comic Sans MS, cursive" font-size="14" text-anchor="middle" fill="#000" font-weight="bold">TOP SECRET</text>
+  <text x="200" y="78" font-family="Comic Sans MS, cursive" font-size="11" text-anchor="middle" fill="#000" font-weight="bold">FELINE LEDGER</text>
+  <!-- Underline -->
+  <line x1="100" y1="82" x2="300" y2="82" stroke="#000" stroke-width="2"/>
+  <line x1="110" y1="86" x2="290" y2="86" stroke="#000" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <text x="90" y="105" font-family="Comic Sans MS, cursive" font-size="9" fill="#000" font-weight="bold">FOOD</text>
+  <text x="180" y="105" font-family="Comic Sans MS, cursive" font-size="9" fill="#000" font-weight="bold">FAT %</text>
+  <text x="250" y="105" font-family="Comic Sans MS, cursive" font-size="9" fill="#000" font-weight="bold">DIGNITY</text>
+  <!-- Header underline -->
+  <line x1="70" y1="110" x2="330" y2="110" stroke="#000" stroke-width="1.5"/>
+
+  <!-- Row 1: Salami -->
+  <text x="75" y="130" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">Salami</text>
+  <text x="175" y="130" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">98%</text>
+  <text x="240" y="130" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">MAX</text>
+  <!-- Star next to salami -->
+  <path d="M305 124 L307 119 L309 124 L314 126 L309 128 L307 133 L305 128 L300 126 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <line x1="70" y1="135" x2="330" y2="135" stroke="#000" stroke-width="0.8"/>
+
+  <!-- Row 2: Tuna -->
+  <text x="75" y="155" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">Tuna</text>
+  <text x="175" y="155" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">85%</text>
+  <text x="240" y="155" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">HIGH</text>
+  <line x1="70" y1="160" x2="330" y2="160" stroke="#000" stroke-width="0.8"/>
+
+  <!-- Row 3: Cheese -->
+  <text x="75" y="180" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">Cheese</text>
+  <text x="175" y="180" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">72%</text>
+  <text x="240" y="180" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">MED</text>
+  <line x1="70" y1="185" x2="330" y2="185" stroke="#000" stroke-width="0.8"/>
+
+  <!-- Row 4: Kibble -->
+  <text x="75" y="205" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">Kibble</text>
+  <text x="175" y="205" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">2%</text>
+  <text x="240" y="205" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">ZERO</text>
+  <!-- Frowny face next to kibble -->
+  <circle cx="310" cy="202" r="6" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="308" cy="200" r="1" fill="#000"/>
+  <circle cx="312" cy="200" r="1" fill="#000"/>
+  <path d="M307 206 Q310 208 313 206" stroke="#000" stroke-width="1" fill="none"/>
+  <line x1="70" y1="210" x2="330" y2="210" stroke="#000" stroke-width="0.8"/>
+
+  <!-- More rows -->
+  <!-- Row 5: Chicken -->
+  <text x="75" y="230" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">Chicken</text>
+  <text x="175" y="230" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">65%</text>
+  <text x="240" y="230" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">MED</text>
+  <line x1="70" y1="235" x2="330" y2="235" stroke="#000" stroke-width="0.8"/>
+
+  <!-- Row 6: Sardines -->
+  <text x="75" y="255" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">Sardines</text>
+  <text x="175" y="255" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">78%</text>
+  <text x="240" y="255" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">HIGH</text>
+  <line x1="70" y1="260" x2="330" y2="260" stroke="#000" stroke-width="0.8"/>
+
+  <!-- Row 7: Dry Treats -->
+  <text x="75" y="280" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">Dry Treats</text>
+  <text x="175" y="280" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">15%</text>
+  <text x="240" y="280" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">LOW</text>
+  <line x1="70" y1="285" x2="330" y2="285" stroke="#000" stroke-width="0.8"/>
+
+  <!-- Row 8: Leftover Pizza -->
+  <text x="75" y="305" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">Pizza</text>
+  <text x="175" y="305" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">91%</text>
+  <text x="240" y="305" font-family="Comic Sans MS, cursive" font-size="8" fill="#000">MAX</text>
+  <path d="M305 299 L307 294 L309 299 L314 301 L309 303 L307 308 L305 303 L300 301 Z" stroke="#000" stroke-width="1" fill="none"/>
+  <line x1="70" y1="310" x2="330" y2="310" stroke="#000" stroke-width="0.8"/>
+
+  <!-- Cat paw print stamp -->
+  <ellipse cx="280" cy="330" rx="10" ry="8" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="272" cy="318" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="280" cy="315" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <circle cx="288" cy="318" r="4" stroke="#000" stroke-width="1.5" fill="none"/>
+  <text x="265" y="348" font-family="Comic Sans MS, cursive" font-size="5" fill="#000">APPROVED</text>
+
+  <!-- Coffee stain -->
+  <path d="M310 50 Q315 45 320 52 Q318 58 312 55" stroke="#000" stroke-width="0.8" fill="none" opacity="0.3"/>
+
+  <!-- Scribbled note in margin -->
+  <text x="340" y="150" font-family="Comic Sans MS, cursive" font-size="6" fill="#000" transform="rotate(90, 340, 150)">MUST GET</text>
+  <text x="348" y="150" font-family="Comic Sans MS, cursive" font-size="6" fill="#000" transform="rotate(90, 348, 150)">MORE!</text>
+
+  <!-- Doodle of cat face in corner -->
+  <circle cx="335" cy="35" r="8" stroke="#000" stroke-width="1" fill="none"/>
+  <circle cx="332" cy="33" r="1.5" fill="#000"/>
+  <circle cx="338" cy="33" r="1.5" fill="#000"/>
+  <path d="M333 36 L335 38 L337 36" stroke="#000" stroke-width="0.8" fill="none"/>
+
+  <!-- Caption -->
+  <text x="200" y="390" font-family="Comic Sans MS, cursive" font-size="16" text-anchor="middle" fill="#000" font-weight="bold">FELINE LEDGER</text>
+</svg>
