@@ -15,12 +15,17 @@ from datetime import datetime
 from dotenv import load_dotenv
 from llm_client import call_llm
 
+from book_config import resolve_book_dir, load_all_chapters, load_layers
+
 BASE_DIR = Path(__file__).parent
 load_dotenv(BASE_DIR / ".env")
 
 JUDGE_MODEL = os.environ.get("AUTONOVEL_JUDGE_MODEL", "openrouter/nex-agi/nex-n2-pro:free")
 API_KEY = os.environ.get("AUTONOVEL_API_KEY", os.environ.get("ANTHROPIC_API_KEY", "local"))
 API_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "http://localhost:20128/v1")
+
+CHAPTERS_DIR = BASE_DIR / "chapters"
+BOOK_LAYOUT = "legacy"
 
 READERS = {
     "editor": {

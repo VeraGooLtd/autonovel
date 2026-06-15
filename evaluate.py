@@ -6,6 +6,7 @@ Usage:
   python evaluate.py --phase=foundation    # Score planning docs only
   python evaluate.py --chapter=5           # Score a single chapter
   python evaluate.py --full                # Score the entire novel
+  python evaluate.py --book-dir=DIR --phase=foundation  # External book dir
 
 Output: structured scores to stdout + eval_logs/<timestamp>.json
 
@@ -25,6 +26,9 @@ from pathlib import Path
 # --- Configuration ---
 BASE_DIR = Path(__file__).parent
 
+# Book-resolver: external book-dir or legacy autonovel layout
+from book_config import resolve_book_dir, load_layers, load_all_chapters
+
 # Load .env file if present
 from dotenv import load_dotenv
 from llm_client import call_llm
@@ -38,9 +42,22 @@ API_BASE_URL = os.environ.get("AUTONOVEL_API_BASE_URL", "http://localhost:20128/
 
 # Beta header to unlock 1M context window on both Opus 4.6 and Sonnet 4.6
 ANTHROPIC_BETA = "context-1m-2025-08-07"
+
+# These are set after argument parsing via apply_book_dir()
 CHAPTERS_DIR = BASE_DIR / "chapters"
+BOOK_LAYOUT = "legacy"
+BOOK_DIR_ARG: str | None = None
 EVAL_LOG_DIR = BASE_DIR / "eval_logs"
 EVAL_LOG_DIR.mkdir(exist_ok=True)
+
+
+def apply_book_dir(book_dir_arg: str | None):
+    """Set CHAPTERS_DIR and BOOK_LAYOUT globals from --book-dir argument."""
+    global CHAPTERS_DIR, BOOK_LAYOUT, BOOK_DIR_ARG
+    BOOK_DIR_ARG = book_dir_arg
+    chapters_dir, layout = resolve_book_dir(book_dir_arg)
+    CHAPTERS_DIR = chapters_dir
+    BOOK_LAYOUT = layout
 
 
 # ---- Mechanical Slop Detection (no LLM needed) ----
@@ -249,28 +266,15 @@ def load_file(path):
 
 
 def load_layer_files():
-    """Load all planning layer files."""
-    return {
-        "voice": load_file(BASE_DIR / "voice.md"),
-        "world": load_file(BASE_DIR / "world.md"),
-        "characters": load_file(BASE_DIR / "characters.md"),
-        "outline": load_file(BASE_DIR / "outline.md"),
-        "canon": load_file(BASE_DIR / "canon.md"),
-    }
+    """Load all planning layer files from book dir or legacy root."""
+    return load_layers(BOOK_DIR_ARG)
 
 
 def load_chapter(n):
     """Load a single chapter file."""
+    if BOOK_LAYOUT == "external":
+        return load_file(CHAPTERS_DIR / f"chapter_{n:02d}.md")
     return load_file(CHAPTERS_DIR / f"ch_{n:02d}.md")
-
-
-def load_all_chapters():
-    """Load all chapter files in order."""
-    chapters = {}
-    for f in sorted(glob.glob(str(CHAPTERS_DIR / "ch_*.md"))):
-        num = int(re.search(r'ch_(\d+)', f).group(1))
-        chapters[num] = Path(f).read_text()
-    return chapters
 
 
 def call_judge(prompt, max_tokens=2000):
@@ -328,7 +332,7 @@ def parse_json_response(text):
         return json.loads(text, strict=False)
     except json.JSONDecodeError:
         # Last resort: fix common issues (literal newlines in strings)
-        fixed = re.sub(r'(?<!\\)\n', '\\n', text)
+        fixed = re.sub(r'(?<!\\)\\n', '\\n', text)
         return json.loads(fixed, strict=False)
 
 
@@ -597,56 +601,42 @@ Score these dimensions:
 - character_voice: Remove all dialogue tags mentally. Can you tell who's
   speaking? Do characters ever sound alike? Does dialogue read as speech
   or as written prose? Does Cass sound like a specific 14-year-old, or
-  like "young protagonist"? Does anyone say something surprising -- not
-  just the right thing, but a REAL thing? Characters who never stumble,
-  hesitate, or say something slightly wrong are AI-pattern characters.
+  like a generic narrator? Quote the best and worst dialogue moment.
 
-- plants_seeded: Were foreshadowing elements placed naturally? A plant
-  that's obvious is worse than a plant that's invisible. Score based on
-  HOW WELL they're integrated, not just whether they're present.
+- world_consistency: Any lore violations? Any new world facts introduced
+  that contradict the world bible or canon? Any technology, magic, or
+  cultural detail that doesn't fit?
 
-- prose_quality: Sentence variety (measure: do 3+ consecutive sentences
-  start the same way?). Specificity (concrete nouns > abstract).
-  Metaphors from Cass's experience, not from a thesaurus. Show-don't-tell
-  at emotional peaks. QUOTE the weakest sentence and explain why. Also
-  check for: repeated phrases, leaned-on constructions, paragraphs that
-  could be cut without loss.
+- emotional_authenticity: Do emotional moments land through scene work
+  (showing) or through narrator assertion (telling)? Quote the strongest
+  emotional moment and the weakest. Does the character's emotional
+  response match their established psychology?
 
-- continuity: Does it follow logically from the previous chapter? Emotional
-  continuity as well as plot continuity. Does the character's state of
-  mind track?
+- pacing: Does the chapter move? Where does it drag? Where does it rush?
+  Is there a clear scene rhythm (tension -> release -> tension) or does
+  it feel flat? Quote the slowest passage and the most gripping passage.
 
-- canon_compliance: Check ALL facts against canon. List violations.
-  One major violation caps score at 6. Check: character names, locations,
-  magic system rules, timeline, established events, physical descriptions.
+- prose_quality: Sentence rhythm variation. Specific vs generic word
+  choice. Metaphors that come from the character's experience vs
+  borrowed literary language. Any AI slop patterns? Quote the single
+  best sentence and the single weakest sentence.
 
-- lore_integration: Does the world do WORK in this chapter, or is it
-  set dressing? A scene that could happen in any fantasy city with
-  find-and-replace on proper nouns scores 5 max.
-
-- engagement: Would a reader turn the page? Where does tension come from --
-  plot, character, mystery, prose? Is there a moment that SURPRISES?
-  Predictable excellence is still predictable. Score 8+ only if the
-  chapter does something unexpected.
+- engagement: If you were reading this for pleasure, would you keep
+  turning pages? What specifically makes you want to continue (or not)?
 
 Respond with JSON:
 {{
-  "voice_adherence": {{"score": N, "weakest_moment": "quote the specific weak passage", "fix": "how to improve it", "note": "..."}},
-  "beat_coverage": {{"score": N, "weakest_moment": "...", "fix": "...", "note": "..."}},
-  "character_voice": {{"score": N, "weakest_moment": "...", "fix": "...", "note": "..."}},
-  "plants_seeded": {{"score": N, "weakest_moment": "...", "fix": "...", "note": "..."}},
-  "prose_quality": {{"score": N, "weakest_sentence": "quote it", "fix": "rewrite suggestion", "strongest_sentence": "quote it", "note": "..."}},
-  "continuity": {{"score": N, "note": "..."}},
-  "canon_compliance": {{"score": N, "violations": ["list any found"], "note": "..."}},
-  "lore_integration": {{"score": N, "weakest_moment": "...", "fix": "...", "note": "..."}},
-  "engagement": {{"score": N, "weakest_moment": "...", "fix": "...", "note": "..."}},
-  "three_weakest_sentences": ["quote 1", "quote 2", "quote 3"],
-  "three_strongest_sentences": ["quote 1", "quote 2", "quote 3"],
-  "ai_patterns_detected": ["list any AI writing patterns found"],
+  "voice_adherence": {{"score": N, "strongest_moment": "...", "weakest_moment": "...", "note": "..."}},
+  "beat_coverage": {{"score": N, "missed_beats": ["..."], "note": "..."}},
+  "character_voice": {{"score": N, "best_dialogue": "...", "worst_dialogue": "...", "note": "..."}},
+  "world_consistency": {{"score": N, "violations": ["..."], "note": "..."}},
+  "emotional_authenticity": {{"score": N, "strongest": "...", "weakest": "...", "note": "..."}},
+  "pacing": {{"score": N, "slowest_passage": "...", "most_gripping": "...", "note": "..."}},
+  "prose_quality": {{"score": N, "best_sentence": "...", "weakest_sentence": "...", "note": "..."}},
+  "engagement": {{"score": N, "note": "..."}},
   "overall_score": N,
   "weakest_dimension": "...",
-  "top_3_revisions": ["specific, actionable revision 1", "revision 2", "revision 3"],
-  "new_canon_entries": ["any new facts established in this chapter"]
+  "top_suggestion": "..."
 }}
 
 FINAL CHECK: If your overall_score is above 7, re-read your weakest_moment
@@ -744,7 +734,7 @@ Respond with JSON:
 
 def evaluate_full():
     layers = load_layer_files()
-    chapters = load_all_chapters()
+    chapters = load_all_chapters(CHAPTERS_DIR, BOOK_LAYOUT)
 
     if not chapters:
         return {"error": "No chapters found", "novel_score": 0.0}
@@ -777,6 +767,8 @@ def evaluate_full():
 
 def main():
     parser = argparse.ArgumentParser(description="Evaluate the novel")
+    parser.add_argument("--book-dir", default=None,
+                        help="Path to external book directory (e.g. MY-DOG-IS-JUDGING-ME-/content/books/the-sentinel-ridge-showdown)")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--phase", choices=["foundation"],
                        help="Evaluate planning documents")
@@ -785,6 +777,8 @@ def main():
     group.add_argument("--full", action="store_true",
                        help="Evaluate the entire novel")
     args = parser.parse_args()
+
+    apply_book_dir(args.book_dir)
 
     if args.phase == "foundation":
         result = evaluate_foundation()
