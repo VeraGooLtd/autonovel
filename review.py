@@ -21,15 +21,18 @@ from datetime import datetime
 from dotenv import load_dotenv
 from llm_client import call_llm
 
+from book_config import resolve_book_dir, load_all_chapter_paths
+
 BASE_DIR = Path(__file__).parent
 load_dotenv(BASE_DIR / ".env", override=True)
 
-# Use Opus for reviews — it's the best at literary analysis
+# Use Opus for reviews -- it's the best at literary analysis
 REVIEW_MODEL = os.environ.get("AUTONOVEL_REVIEW_MODEL", "openrouter/nex-agi/nex-n2-pro:free")
 API_KEY = os.environ.get("AUTONOVEL_API_KEY", os.environ.get("ANTHROPIC_API_KEY", "local"))
 API_BASE = os.environ.get("AUTONOVEL_API_BASE_URL", "http://localhost:20128/v1")
 
 CHAPTERS_DIR = BASE_DIR / "chapters"
+BOOK_LAYOUT = "legacy"
 LOGS_DIR = BASE_DIR / "edit_logs"
 
 REVIEW_PROMPT = """Read the below novel, "{title}". Review it first as a literary critic (like a newspaper book review) and then as a professor of fiction. In the later review, give specific, actionable suggestions for any defects you find. Be fair but honest. You don't *have* to find defects.
@@ -47,8 +50,20 @@ def call_opus(prompt, max_tokens=8000):
         api_base=API_BASE,
         api_key=API_KEY,
     )
-def get_title():
+def get_title(book_dir_arg=None):
     """Extract novel title from first chapter or outline."""
+    if book_dir_arg:
+        bd = Path(book_dir_arg)
+        outline = bd / "plans" / "outline.md"
+        if outline.exists():
+            first_line = outline.read_text().split("\n")[0]
+            title = first_line.lstrip("# ").strip()
+            if title:
+                return title
+        ch1 = bd / "manuscript" / "chapter_01.md"
+        if ch1.exists():
+            first_line = ch1.read_text().split("\n")[0]
+            return first_line.lstrip("# ").strip()
     outline = BASE_DIR / "outline.md"
     if outline.exists():
         first_line = outline.read_text().split("\n")[0]
@@ -62,20 +77,21 @@ def get_title():
     return "Untitled Novel"
 
 
-def build_manuscript():
+def build_manuscript(book_dir_arg=None):
     """Concatenate all chapters into a single text."""
-    chapters = sorted(CHAPTERS_DIR.glob("ch_*.md"))
-    if not chapters:
+    chapters_dir, layout = resolve_book_dir(book_dir_arg)
+    paths = load_all_chapter_paths(chapters_dir, layout)
+    if not paths:
         print("ERROR: No chapters found.", file=sys.stderr)
         sys.exit(1)
-    
+
     parts = []
-    for ch in chapters:
-        parts.append(ch.read_text())
-    
+    for n in sorted(paths.keys()):
+        parts.append(paths[n].read_text())
+
     manuscript = "\n\n---\n\n".join(parts)
     wc = len(manuscript.split())
-    print(f"Manuscript: {len(chapters)} chapters, {wc:,} words", file=sys.stderr)
+    print(f"Manuscript: {len(paths)} chapters, {wc:,} words", file=sys.stderr)
     return manuscript
 
 
@@ -194,9 +210,10 @@ def should_stop(parsed_review):
 
 def cmd_review(args):
     """Generate a review."""
-    title = get_title()
-    manuscript = build_manuscript()
-    
+    book_dir = getattr(args, 'book_dir', None)
+    title = get_title(book_dir)
+    manuscript = build_manuscript(book_dir)
+
     prompt = REVIEW_PROMPT.format(title=title, manuscript=manuscript)
     
     review_text = call_opus(prompt)
@@ -261,15 +278,17 @@ def cmd_parse(args):
 
 def main():
     parser = argparse.ArgumentParser(description="Deep manuscript review via Opus")
+    parser.add_argument("--book-dir", default=None,
+                        help="Path to external book directory")
     parser.add_argument("--output", "-o", default=None, help="Save human-readable review to file")
     parser.add_argument("--parse", action="store_true", help="Parse most recent review")
-    
+
     args = parser.parse_args()
-    
+
     if not API_KEY:
         print("ERROR: ANTHROPIC_API_KEY not set in .env", file=sys.stderr)
         sys.exit(1)
-    
+
     if args.parse:
         cmd_parse(args)
     else:
