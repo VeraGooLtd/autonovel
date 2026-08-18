@@ -1,11 +1,11 @@
 {
   "phase": "foundation",
-  "current_focus": null,
-  "iteration": 0,
-  "foundation_score": 0.0,
-  "lore_score": 0.0,
+  "current_focus": "commit foundation iteration 1",
+  "iteration": 1,
+  "foundation_score": 8.5,
+  "lore_score": 9.0,
   "chapters_drafted": 0,
-  "chapters_total": 0,
+  "chapters_total": 15,
   "novel_score": 0.0,
   "debts": []
 }
