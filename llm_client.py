@@ -99,6 +99,8 @@ def call_llm(
     if raw.startswith("data:"):
         raw = "\n".join(line[5:].strip() for line in raw.splitlines() if line.startswith("data:")).strip()
     data = response.json() if not raw else __import__("json").loads(raw)
+    if "choices" not in data:
+        raise ValueError(f"LLM response missing 'choices': {str(data)[:300]}")
     return data["choices"][0]["message"]["content"]
 
 
